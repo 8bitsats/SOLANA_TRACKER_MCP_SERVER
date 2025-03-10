@@ -1,70 +1,12 @@
-# solana-tracker-server MCP Server
+# Solana Trading MCP Server
 
-A Model Context Protocol server
-
-This is a TypeScript-based MCP server that implements a simple notes system. It demonstrates core MCP concepts by providing:
-
-- Resources representing text notes with URIs and metadata
-- Tools for creating new notes
-- Prompts for generating summaries of notes
+A comprehensive server for launching Solana tokens with AI-powered features, including token concept generation, image creation, and DNA sequence generation.
 
 ## Features
 
-### Resources
-- List and access notes via `note://` URIs
-- Each note has a title, content and metadata
-- Plain text mime type for simple content access
-
-### Tools
-- `create_note` - Create new text notes
-  - Takes title and content as required parameters
-  - Stores note in server state
-
-### Prompts
-- `summarize_notes` - Generate a summary of all stored notes
-  - Includes all note contents as embedded resources
-  - Returns structured prompt for LLM summarization
-
-## Development
-
-Install dependencies:
-```bash
-npm install
-```
-
-Build the server:
-```bash
-npm run build
-```
-
-For development with auto-rebuild:
-```bash
-npm run watch
-```
-
-## Installation
-
-To use with Claude Desktop, add the server config:
-
-On MacOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
-On Windows: `%APPDATA%/Claude/claude_desktop_config.json`
-
-```json
-{
-  "mcpServers": {
-    "solana-tracker-server": {
-      "command": "/path/to/solana-tracker-server/build/index.js"
-    }
-  }
-}
-```
-
-### Debugging
-
-Since MCP servers communicate over stdio, debugging can be challenging. We recommend using the [MCP Inspector](https://github.com/modelcontextprotocol/inspector), which is available as a package script:
-
-```bash
-npm run inspector
-```
-
-The Inspector will provide a URL to access debugging tools in your browser.
+- **AI-Powered Token Generation**: Uses xAI/Grok to generate innovative token concepts, names, and descriptions
+- **Image Generation**: Utilizes FAL.ai's fast-lightning-sdxl model for high-quality token artwork
+- **DNA Sequence Generation**: Integrates NVIDIA's DNA Generator API for unique token identifiers
+- **Solana Token Launcher**: Creates and deploys tokens on the Solana blockchain
+- **Real-time WebSocket Support**: Provides immediate feedback during image generation
+- **Multiple Testing Options**: Supports testing on devnet and real token launches on mainnet
